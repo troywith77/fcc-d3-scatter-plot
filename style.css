@@ -26,3 +26,8 @@ body {
   font-size: 14px;
   transform: translate(900px, 320px);
 }
+
+circle {
+  stroke: #000;
+  opacity: 0.8;
+}

@@ -13,6 +13,7 @@ const main = async () => {
 
   // 设置svg的宽，高，padding
   const width = 920, height = 630, padding = 40
+  const color = d3.scaleOrdinal(d3.schemeCategory10)
 
   const svg = d3
     .select('#container')
@@ -67,9 +68,11 @@ const main = async () => {
     .enter()
     .append('circle')
     .attr('r', 6)
-    .attr('fill', '#000')
+    .attr('fill', d => color(d.Doping === ''))
     .attr('cx', d => xScale(d.Year))
     .attr('cy', d => yScale(d.Time))
+    .attr('data-xvalue', d => d.Year)
+    .attr('data-yvalue', d => d.Time.toISOString())
 }
 
 main()
