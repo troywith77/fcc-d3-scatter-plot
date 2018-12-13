@@ -10,21 +10,20 @@ body {
 }
 
 #tooltip {
-  display: none;
-  align-items: center;
-  justify-content: center;
+  display: flex;
   flex-direction: column;
   position: absolute;
-  text-align: center;
-  width: 150px;
-  height: 50px;
-  padding: 2px;
+  width: 300px;
+  min-height: 50px;
+  padding: 12px;
   background: lightsteelblue;
   box-shadow: 1px 1px 10px;
   border-radius: 2px;
   pointer-events: none;
-  font-size: 14px;
-  transform: translate(900px, 320px);
+  font-size: 12px;
+}
+#tooltip p {
+  margin: 10px 0;
 }
 
 circle {
